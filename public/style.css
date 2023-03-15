@@ -1,0 +1,122 @@
+body {
+  background-color: #34733a;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.containers {
+  margin-top: 3rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  color: rgb(211, 211, 211);
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 40%;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.card__1 {
+  align-self: baseline;
+}
+
+.card__2 {
+  align-content: center;
+}
+
+.card__content {
+  text-align: center;
+}
+
+.heading {
+  color: rgb(229, 229, 229);
+  text-align: center;
+  margin: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.heading__2 {
+  text-align: center;
+  align-self: center;
+  margin: 0;
+}
+
+.error {
+  color: #fc2828;
+}
+
+.form {
+  display: flex;
+  flex-flow: column;
+}
+
+.form__control {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 1rem;
+}
+
+.form__text-area {
+  outline: none;
+  height: 200px;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+.form__text-area:focus {
+  border: 2px solid #34733a;
+}
+
+.form__selector {
+  outline: none;
+  padding: 0.6rem;
+  border-radius: 4px;
+}
+
+.form__selector:focus {
+  border: 2px solid #34733a;
+}
+
+.form__control > label {
+  margin-bottom: 2px;
+}
+
+.form__control > input {
+  border: 2px solid #ededed;
+  padding: 0.6rem;
+  border-radius: 4px;
+}
+
+.btn {
+  align-self: center;
+  width: 40%;
+  padding: 0.9rem 0.3rem;
+  margin: 5px 0;
+  border: none;
+  background-color: #34733a;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 745px) {
+  .containers {
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    width: 80%;
+  }
+}
