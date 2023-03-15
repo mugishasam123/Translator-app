@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Translator App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+  <h2 class="heading">Translator App</h2>
+  <div class="containers">
+    <div class="card card__1">
+      <form action="/translate" method="POST" class="form">
+        <div class="form__control">
+          <label for="text">Input Text:</label>
+          <textarea class="form__text-area" name="text" placeholder="Write the texts here..." required></textarea>
+        </div>
+        <div class="form__control">
+          <label for="target-language">Translate To:</label>
+          <select name="targetLanguage" id="target-language" class="form__selector" required>
+            <% languageSymbols.map(language => { %>
+              <option value=<%=`${language.code}`%>><%=`${language.name} - ${language.code}` %></option>
+            <%}) %>
+          </select>
+        </div>
+        <button type="submit" class="btn">Translate</button>
+      </form>
+    </div>
+    <div class="card card__2">
+      <h4 class="heading__2">Translated Text</h4>
+      <% if (error) { %>
+        <p class="error"><%= error %></p>
+      <% } %>
+
+      <% if (translation) { %>
+        <p class="card__content"><%= translation %></p>
+      <% } %> 
+    </div>
+
+  </div>
+</body>
+</html>
